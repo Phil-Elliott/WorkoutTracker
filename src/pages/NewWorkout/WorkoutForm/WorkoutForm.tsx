@@ -4,8 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
 import { ExerciseData, SetData } from "../../../App";
 import { NewWorkoutProps } from "../NewWorkout";
-import DisplayExercise from "./DisplayExercise";
-import Exercise from "./Exercise";
+import { DisplayExercise, Exercise } from "./";
 
 type AddData = {
   weight: string;

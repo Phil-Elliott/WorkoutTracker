@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
 import { Button, Col, Form, Row, Stack } from "react-bootstrap";
-import { SetData } from "../../../App";
-import EditSetInfo from "./EditSetInfo";
-import SetInfo from "./SetInfo";
+import { SetData } from "../../../../App";
+import { EditSetInfo, SetInfo } from "..";
 
 type ExerciseProps = {
   removeSet: any;

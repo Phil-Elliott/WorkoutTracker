@@ -1,12 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
 import { useLocalStorage } from "./hooks/UseLocalStorage";
 import { Container } from "react-bootstrap";
 import { Navigate, Route, Routes } from "react-router-dom";
-import EditWorkout from "./pages/Workout/EditWorkout";
 import NewWorkout from "./pages/NewWorkout/NewWorkout";
-import Workout from "./pages/Workout/Workout";
-import { WorkoutLayout } from "./pages/Workout/WorkoutLayout";
+import { WorkoutLayout, EditWorkout, Workout } from "./pages/Workout";
 import Workouts from "./pages/Home/Workouts";
 import { v4 as uuidV4 } from "uuid";
 

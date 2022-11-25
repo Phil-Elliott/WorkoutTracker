@@ -1,6 +1,4 @@
-import React from "react";
 import { Button, Col, Form, Row, Stack } from "react-bootstrap";
-import { ExerciseData } from "../../../App";
 
 const DisplayExercise = ({ exercise }: any) => {
   console.log(exercise);
@@ -32,18 +30,6 @@ const DisplayExercise = ({ exercise }: any) => {
           </Button>
         </Col>
       </Row>
-
-      {/* {exercise.set.map((set, index) => (
-        <EditSetInfo
-          key={set.id}
-          index={index}
-          id={set.id}
-          weight={set.weight}
-          reps={set.reps}
-          removeSet={removeSet}
-          updateSet={updateSet}
-        />
-      ))} */}
     </Stack>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button, Col, Form, Stack } from "react-bootstrap";
-import { SetFunctions } from "./WorkoutForm";
+import { SetFunctions } from "../WorkoutForm";
 
 type SetInfoProps = {
   length: number;

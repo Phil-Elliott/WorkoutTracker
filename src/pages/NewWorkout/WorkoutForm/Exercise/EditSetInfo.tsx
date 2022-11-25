@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button, Col, Form, Stack } from "react-bootstrap";
-import { EditSetFunctions } from "./WorkoutForm";
+import { EditSetFunctions } from "./../WorkoutForm";
 
 const EditSetInfo = ({
   updateSet,
