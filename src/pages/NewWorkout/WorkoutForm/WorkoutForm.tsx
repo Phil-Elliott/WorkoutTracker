@@ -2,7 +2,7 @@ import { useState, useRef, FormEvent } from "react";
 import { Button, Col, Form, Row, Stack } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
-import { ExerciseData, SetData } from "../../../App";
+import { ExerciseData, SetData } from "../../../Interfaces";
 import { NewWorkoutProps } from "../NewWorkout";
 import { DisplayExercise, Exercise } from "./";
 
@@ -12,13 +12,13 @@ type AddData = {
 };
 
 export type SetFunctions = {
-  addSet: any;
-  removeSet: any;
+  addSet: (data: AddData) => void;
+  removeSet: (id: string) => void;
 };
 
 export type EditSetFunctions = {
-  updateSet: any;
-  removeSet: any;
+  updateSet: (data: SetData) => void;
+  removeSet: (id: string) => void;
   index: number;
 } & SetData;
 

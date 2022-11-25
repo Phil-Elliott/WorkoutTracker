@@ -1,22 +1,19 @@
 import React, { useRef } from "react";
 import { Button, Col, Form, Row, Stack } from "react-bootstrap";
-import { SetData } from "../../../../App";
 import { EditSetInfo, SetInfo } from "..";
+import { SetData } from "../../../../Interfaces";
+import { SetFunctions } from "../WorkoutForm";
 
 type ExerciseProps = {
-  removeSet: any;
-  updateSet: any;
-  addSet: any;
+  updateSet: (data: SetData) => void;
   set: SetData[];
-
-  addExercise: any;
-};
+  addExercise: (exercise: string) => void;
+} & SetFunctions;
 
 const Exercise = ({
   removeSet,
   updateSet,
   set,
-
   addSet,
   addExercise,
 }: ExerciseProps) => {

@@ -1,7 +1,8 @@
+import { PreWorkoutInfo } from "../../Interfaces";
 import WorkoutForm from "./WorkoutForm/WorkoutForm";
 
 export type NewWorkoutProps = {
-  addWorkout: any;
+  addWorkout: (data: PreWorkoutInfo) => void;
 };
 
 const NewWorkout = ({ addWorkout }: NewWorkoutProps) => {

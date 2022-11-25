@@ -6,33 +6,7 @@ import NewWorkout from "./pages/NewWorkout/NewWorkout";
 import { WorkoutLayout, EditWorkout, Workout } from "./pages/Workout";
 import Workouts from "./pages/Home/Workouts";
 import { v4 as uuidV4 } from "uuid";
-
-export type ExerciseData = {
-  id: string;
-  exercise: string;
-  set: SetData[];
-};
-
-export type WorkoutInfo = {
-  id: string;
-  workout: string;
-  date: string;
-  exercise: string;
-  sets: SetData[];
-};
-
-export type WorkoutInfo2 = {
-  workout: string;
-  date: string;
-  exercise: string;
-  sets: SetData[];
-};
-
-export type SetData = {
-  id: string;
-  weight: string;
-  reps: number;
-};
+import { PreWorkoutInfo, WorkoutInfo } from "./Interfaces";
 
 function App() {
   const [workouts, setWorkouts] = useLocalStorage<WorkoutInfo[]>(
@@ -40,12 +14,14 @@ function App() {
     []
   );
 
-  const addWorkout = ({ workout, date, exercise, sets }: WorkoutInfo2) => {
+  // Adds a workout to the workouts array (NewWorkout component)
+  const addWorkout = ({ workout, date, exercise, sets }: PreWorkoutInfo) => {
     setWorkouts((prevWorkouts) => {
       return [...prevWorkouts, { id: uuidV4(), workout, date, exercise, sets }];
     });
   };
 
+  // Deletes a workout from the workouts array (NewWorkout component)
   const deleteWorkout = (id: string) => {
     setWorkouts((prevWorkouts) => {
       return prevWorkouts.filter((workout) => workout.id !== id);

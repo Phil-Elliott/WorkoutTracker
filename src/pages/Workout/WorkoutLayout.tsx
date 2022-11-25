@@ -4,9 +4,13 @@ import {
   useOutletContext,
   useParams,
 } from "react-router-dom";
-import { WorkoutInfo } from "../../App";
+import { WorkoutInfo } from "../../Interfaces";
 
-export const WorkoutLayout = ({ workouts }: any) => {
+type WorkoutLayoutProps = {
+  workouts: WorkoutInfo[];
+};
+
+export const WorkoutLayout = ({ workouts }: WorkoutLayoutProps) => {
   const { id } = useParams();
   const workout = workouts.find((workout: any) => workout.id === id);
 
@@ -18,20 +22,3 @@ export const WorkoutLayout = ({ workouts }: any) => {
 export const useWorkout = () => {
   return useOutletContext<WorkoutInfo>();
 };
-
-// type NoteLayoutProps = {
-//   notes: Note[];
-// };
-
-// export function NoteLayout({ notes }: NoteLayoutProps) {
-//   const { id } = useParams();
-//   const note = notes.find((note) => note.id === id);
-
-//   if (note == null) return <Navigate to="/" replace />;
-
-//   return <Outlet context={note} />;
-// }
-
-// export function useNote() {
-//   return useOutletContext<Note>();
-// }

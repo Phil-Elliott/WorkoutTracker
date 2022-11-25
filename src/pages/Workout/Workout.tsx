@@ -1,8 +1,12 @@
-import { Badge, Button, Col, Row, Stack } from "react-bootstrap";
+import { Button, Col, Row, Stack } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useWorkout } from "./WorkoutLayout";
 
-const Workout = ({ deleteWorkout }: { deleteWorkout: any }) => {
+type WorkoutProps = {
+  deleteWorkout: (id: string) => void;
+};
+
+const Workout = ({ deleteWorkout }: WorkoutProps) => {
   const workout = useWorkout();
   const navigate = useNavigate();
 

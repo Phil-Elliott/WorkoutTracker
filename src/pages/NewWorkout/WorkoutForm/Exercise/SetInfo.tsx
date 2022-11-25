@@ -12,7 +12,7 @@ const SetInfo = ({ addSet, removeSet, length }: SetInfoProps) => {
 
   const addData = () => {
     const weight = weightRef.current?.value;
-    const reps = repsRef.current?.value;
+    const reps = Number(repsRef.current?.value);
 
     if (weight && reps) {
       addSet({
